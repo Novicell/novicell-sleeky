@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <link rel="stylesheet" href="sleeky.min.css">
+    </head>
+    <body>
+
+        <div id="sleeky" class="sleeky collapsed">
+            <div class="sleeky-collapsed">
+                <span class="sleeky__title">Clickbait title</span>
+            </div>
+            <div class="sleeky-expanded">
+                <button class="sleeky-expanded__close" id="sleeky-toggle">X</button>
+                <div class="sleeky-expanded__content">
+                    <span class="sleeky__title">Clickbait title</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quas provident, nesciunt, obcaecati pariatur quia laboriosam blanditiis nihil sit sapiente.</p>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="vendor.min.js"></script>
+        <script type="text/javascript" src="sleeky.min.js"></script>
+        <script type="text/javascript">
+            // Document ready
+            $(function(){
+                novicell.sleeky.init({'selector': $('#sleeky')});
+            });
+        </script>
+    </body>
+</html>
