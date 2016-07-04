@@ -6,73 +6,73 @@
 // Variables
 @sleeky-width: 320px;
 
-* {
-    box-sizing: border-box;
-    font-family: "Arial";
-}
-
 .sleeky {
     position: relative;
+
+    &.collapsed {
+        .sleeky-expanded {bottom: -100%;}
+        .sleeky-collapsed {bottom: 0;}
+    }
+}
+
+.sleeky-collapsed {
+    background: #333;
+    color: #fff;
+    width: @sleeky-width;
+    cursor: pointer;
+    overflow: hidden;
+    position: fixed;
+    bottom: -100%;
+    right: 0;
+    z-index:2800;
+
+    &__title {
+        display: block;
+        font-weight: bold;
+        padding: 15px;
+    }
+
+    transition: bottom .3s ease-in-out .3s;
+}
+
+.sleeky-expanded {
+    background: #CF423F;
+    color: #fff;
+    width: @sleeky-width;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2900;
+    transition: bottom .3s ease-in-out;
 
     &__title {
         display: block;
         font-weight: bold;
     }
 
-    &.collapsed {
-        .sleeky-expanded {bottom: -250px;}
-        .sleeky-collapsed {bottom: 0;}
-    }
-}
-
-.sleeky-collapsed {
-    overflow: hidden;
-    background: #333;
-    color: #fff;
-    position: fixed;
-    bottom: -48px;
-    right: 0;
-    width: @sleeky-width;
-    padding: 15px;
-    transition: bottom .3s ease-in-out .3s;
-    cursor: pointer;
-    z-index:2800;
-}
-
-.sleeky-expanded {
-    overflow: hidden;
-    background: #CF423F;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    transition: bottom .3s ease-in-out;
-    z-index: 2900;
-    right: 0;
-    width: @sleeky-width;
-
     &__content {padding: 15px;}
 
     &__close {
-        cursor: pointer;
-        border: 0;
+        display: block;
         background: #333;
+        border: 0;
         color: #fff;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer;
         position: absolute;
         top: 0;
         right: 0;
-        display: block;
-        width: 40px;
-        height: 40px;
         z-index: 1;
-        font-size: 20px;
         font-weight: normal;
         text-align: center;
-        line-height: 40px;
         font-size: 24px;
 
         &:hover {
-            text-decoration: none;
             background: lighten(#333, 5%);
+            text-decoration: none;
             outline: none;
         }
 
