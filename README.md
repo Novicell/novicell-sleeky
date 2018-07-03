@@ -1,4 +1,7 @@
 # Novicell Sleeky
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Novicell/novicell-sleeky.svg)](https://greenkeeper.io/)
+
 Simplified popup in the right bottom corner of the screen.
 
 ## How it works
